@@ -184,17 +184,20 @@ lab.experiment('child-models', () => {
             response.result.paths['/bar/arrays'].post.parameters[0]
                 .schema
         ).to.equal({
+            type: 'array',
             $ref: '#/definitions/FooArrParent'
         });
         expect(
             response.result.paths['/bar/arrays'].post.responses[200]
                 .schema
         ).to.equal({
+            type: 'array',
             $ref: '#/definitions/FooArrParent'
         });
         expect(response.result.definitions.FooArrParent).to.equal({
             type: 'array',
             items: {
+                type: 'array',
                 $ref: '#/definitions/FooArr'
             }
         });

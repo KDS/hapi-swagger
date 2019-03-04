@@ -461,6 +461,7 @@ lab.experiment('responses', () => {
         ).to.equal({
             description: 'Success',
             schema: {
+                type: 'array',
                 $ref: '#/definitions/HTTP200'
             }
         });
@@ -875,6 +876,7 @@ lab.experiment('responses', () => {
                     responses: {
                         '200': {
                             schema: {
+                                description: 'json body for sum',
                                 $ref: '#/definitions/Sum'
                             },
                             description: 'Success with response.schema'
@@ -934,6 +936,7 @@ lab.experiment('responses', () => {
                         '200': {
                             description: 'json body for sum',
                             schema: {
+                                description: 'json body for sum',
                                 $ref: '#/definitions/Sum'
                             }
                         },
